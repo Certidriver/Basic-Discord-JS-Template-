@@ -2,3 +2,6 @@ prefix - config.json
 bot token - .env 
 
 startup = node index.js 
+
+This bot is ready to go, You may addon to this if you wish.
+You should get the idea around this.
