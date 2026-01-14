@@ -1,0 +1,13 @@
+{
+  "name": "Certidriver's Basic DiscordJS Template",
+  "version": "1.0.0",
+  "description": "@certidriver01's Basic DiscordJS Template",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.0.0",
+    "dotenv": "^16.0.0"
+  }
+}

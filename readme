@@ -1,0 +1,4 @@
+prefix - config.json 
+bot token - .env 
+
+startup = node index.js 
