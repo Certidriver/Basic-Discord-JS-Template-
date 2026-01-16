@@ -27,7 +27,9 @@ const slashCommandsPath = path.join(__dirname, 'commands', 'slashCommands');
 if (fs.existsSync(slashCommandsPath)) {
     const slashCommandFiles = fs.readdirSync(slashCommandsPath).filter(file => file.endsWith('.js'));
     for (const file of slashCommandFiles) {
-        const command = require(path.join(slashCommandsPath, file));
+        let command = require(path.join(slashCommandsPath, file));
+        // Support both default and direct exports
+        if (command.default) command = command.default;
         client.slashCommands.set(command.data.name, command);
     }
 }
