@@ -30,6 +30,10 @@ if (fs.existsSync(slashCommandsPath)) {
         let command = require(path.join(slashCommandsPath, file));
         // Support both default and direct exports
         if (command.default) command = command.default;
+        if (!command.data || !command.data.name) {
+            console.warn(`Skipping invalid slash command file: ${file}`);
+            continue;
+        }
         client.slashCommands.set(command.data.name, command);
     }
 }
